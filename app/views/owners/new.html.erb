@@ -10,10 +10,15 @@
 
     <%= form_for(@owner) do |f| %>
       <%= f.text_field :first_name, :placeholder => "Nombre" %>
+   </br>
       <%= f.text_field :last_name, :placeholder => "Apellido" %>
+   </br>
       <%= f.email_field :email, :placeholder => "Email" %>
+   </br>
       <%= f.password_field :password, :placeholder => "Contraseña" %>
+   </br>
       <%= f.submit "Crear una cuenta", class: "btn-submit" %>
+   </br>
     <% end %>
 
 
