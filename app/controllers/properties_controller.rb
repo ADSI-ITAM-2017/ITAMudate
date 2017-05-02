@@ -1,4 +1,7 @@
 class PropertiesController < ApplicationController
+
+   #before_action :owner_user, only: [:index, :show]
+
   def index
   end
 
