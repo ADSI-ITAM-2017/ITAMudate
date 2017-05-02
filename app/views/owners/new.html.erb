@@ -9,11 +9,11 @@
     <% end %>
 
     <%= form_for(@owner) do |f| %>
-      <%= f.text_field :first_name, :placeholder => "First name" %>
-      <%= f.text_field :last_name, :placeholder => "Last name" %>
+      <%= f.text_field :first_name, :placeholder => "Nombre" %>
+      <%= f.text_field :last_name, :placeholder => "Apellido" %>
       <%= f.email_field :email, :placeholder => "Email" %>
-      <%= f.password_field :password, :placeholder => "Password" %>
-      <%= f.submit "Create an account", class: "btn-submit" %>
+      <%= f.password_field :password, :placeholder => "Contraseña" %>
+      <%= f.submit "Crear una cuenta", class: "btn-submit" %>
     <% end %>
 
 
