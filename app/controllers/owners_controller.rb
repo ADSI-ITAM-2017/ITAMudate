@@ -13,6 +13,10 @@ class OwnersController < ApplicationController
       end
    end
 
+   def inicio
+      
+   end
+
    private
    def owner_params
       params.require(:owner).permit(:first_name, :last_name, :email, :password)
