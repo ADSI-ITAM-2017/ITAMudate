@@ -6,7 +6,7 @@ class CreateProperties < ActiveRecord::Migration[5.0]
       t.string :address
       t.float :price
       t.string :ownerName
-      t.integer :ownerPhone
+      t.string :ownerPhone
       t.string :ownerEmail
 
       t.timestamps
