@@ -1,30 +1,14 @@
 Rails.application.routes.draw do
-  #get 'properties/index'
+   root 'startup#index'
+   get 'startup/index'
 
-  #get 'properties/show'
+   get 'registrate'  => 'users#new'
+   get 'ingresa' => 'sessions#new'
+   post 'ingresa' => 'sessions#create'
+   delete 'salir' => 'sessions#destroy'
+   resources :users
 
-  #get 'properties/new'
-
-  #get 'properties/create'
-
-  #get 'properties/edit'
-
-  #get 'properties/update'
-
-  #get 'properties/destroy'
-
+   get 'agrega'  => 'houses#new' 
+   resources :houses
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-  root 'owners#inicio'
-
-  resources :properties
-
-  get 'signup'  => 'owners#new'
-  resources :owners
-
-  get 'inicio' => 'owners#inicio'
-
-  get '/login' => 'sessions#new'
-  post 'login' => 'sessions#create'
-
-  delete 'logout' => 'sessions#destroy'
 end

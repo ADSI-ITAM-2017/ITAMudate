@@ -1,0 +1,19 @@
+<h1> Añadir casa </h1>
+
+   <%= form_for(@house) do |f| %>
+      </br>
+      <%= f.text_field :title, :placeholder => "Título" %>
+      </br>
+      <%= f.text_field :description, :placeholder => "Descripción" %>
+      </br>
+      <%= f.text_field :address, :placeholder => "Dirección" %>
+      </br>
+      <%= f.text_field :price, :placeholder => "Precio" %>
+      </br>
+      <%= f.text_field :bathrooom, :placeholder => "Número de baños" %>
+      </br>
+      <%= f.email_field :email, :placeholder => "email" %>
+      </br>
+      <%= f.submit "Subir casa", class: "btn-submit" %>
+      </br>
+   <% end %>
