@@ -5,16 +5,16 @@
       <tr>
          <th> Título </th>
          <th> Contenido </th>
-         <th> colspan="5" </th>
+         <th> colspan="3" </th>
       </tr>
    </thead>
 
    <tbody>
-      <%= form_for(@house) do |h| %>
+      <%= @houses.each do |house| %>
       <tr>
-         <td> <%= h.title %> </td>
-         <td> <%= h.price %> </td>
-         <td> <%= image_tag h.image.url(:medium) %> </td>
+         <td> <%= house.title %> </td>
+         <td> <%= house.price %> </td>
+         <td> <%= image_tag house.image.url(:medium) %> </td>
       </tr>
       <% end %>
    </tbody>

@@ -8,10 +8,17 @@ class HousesController < ApplicationController
    def create
       @house = House.new(house_params)
       if @house.save
-         redirect_to '/'
+         redirect_to '/catalogo'
       else
          redirect_to '/'
       end
+   end
+
+   def index
+     @houses = House.all
+   end
+
+   def show
    end
 
    private
