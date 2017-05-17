@@ -6,7 +6,7 @@ html{
 }
 html, body{
    background-image: url("../assets/callout.jpg");
-   background-size:cover; 
+   background-size:cover;
    background-repeat:no-repeat;
    background-attachment:fixed;
    height:100%;
@@ -18,7 +18,7 @@ html, body{
 
 
 
-   <%= form_for(@house) do |f| %>
+   <%= form_for @house, html: { multipart: true } do |f| %>
       </br>
       <%= f.text_field :title, :placeholder => "Título" %>
       </br>
@@ -31,6 +31,12 @@ html, body{
       <%= f.text_field :bathrooom, :placeholder => "Número de baños" %>
       </br>
       <%= f.email_field :email, :placeholder => "email" %>
+      </br>
+      <!-- <div class="field"> -->
+      <div style="text-align:center;">
+      <!-- <br /> -->
+        <%= f.file_field :image %>
+      </div>
       </br>
       <%= f.submit "Subir casa", class: "btn-submit" %>
       </br>
