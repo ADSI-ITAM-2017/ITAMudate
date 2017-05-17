@@ -1,0 +1,21 @@
+<h1> Casas disponibles </h1>
+
+<table>
+   <thead>
+      <tr>
+         <th> Título </th>
+         <th> Contenido </th>
+         <th> colspan="5" </th>
+      </tr>
+   </thead>
+
+   <tbody>
+      <%= form_for(@house) do |h| %>
+      <tr>
+         <td> <%= h.title %> </td>
+         <td> <%= h.price %> </td>
+         <td> <%= image_tag h.image.url(:medium) %> </td>
+      </tr>
+      <% end %>
+   </tbody>
+</table>
