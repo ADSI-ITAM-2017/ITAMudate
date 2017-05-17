@@ -1,4 +1,22 @@
+<!DOCTYPE html>
+<head>
+<style>
+html{
+   height: 100%;
+}
+html, body{
+   background-image: url("../assets/callout.jpg");
+   background-size:cover; 
+   background-repeat:no-repeat;
+   background-attachment:fixed;
+   height:100%;
+}
+</style>
+</head>
+<body>
 <h1> Añadir casa </h1>
+
+
 
    <%= form_for(@house) do |f| %>
       </br>
@@ -16,4 +34,6 @@
       </br>
       <%= f.submit "Subir casa", class: "btn-submit" %>
       </br>
+</body>
+
    <% end %>
