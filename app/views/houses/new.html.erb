@@ -20,23 +20,32 @@ html, body{
 
    <%= form_for @house, html: { multipart: true } do |f| %>
       </br>
+      </br>
+      </br>
       <%= f.text_field :title, :placeholder => "Título" %>
+      </br>
       </br>
       <%= f.text_field :description, :placeholder => "Descripción" %>
       </br>
+      </br>
       <%= f.text_field :address, :placeholder => "Dirección" %>
+      </br>
       </br>
       <%= f.text_field :price, :placeholder => "Precio" %>
       </br>
+      </br>
       <%= f.text_field :bathrooom, :placeholder => "Número de baños" %>
       </br>
+      </br>
       <%= f.email_field :email, :placeholder => "email" %>
+      </br>
       </br>
       <!-- <div class="field"> -->
       <div style="text-align:center;">
       <!-- <br /> -->
         <%= f.file_field :image %>
       </div>
+      </br>
       </br>
       <%= f.submit "Subir casa", class: "btn-submit" %>
       </br>

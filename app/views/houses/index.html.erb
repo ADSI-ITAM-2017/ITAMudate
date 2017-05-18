@@ -2,24 +2,31 @@
 <head>
 <style>
 table {
-    font-family: arial, sans-serif;
+    font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial sans-serif;
     border-collapse: collapse;
     width: 100%;
 }
 
+h1 {
+  text-align: center;
+  color: lightgrey;
+}
+
 td, th {
-    border: 1px solid #dddddd;
-    text-align: left;
+    /*border: 1px solid #dddddd;*/
+    text-align: center;
+    color: lightgrey;
     padding: 8px;
+    font-size: 175%;
 }
 tr:nth-child(even) {
-    background-color: #dddddd;
+    /*background-color: #dddddd;*/
 }
 html{
    height: 10%;
 }
 html, body{
-   background-image: url("../assets/living.jpg");
+   background-image: url("../assets/callejon.jpeg");
    background-size:cover;
   background-repeat:no-repeat;
   background-attachment:fixed;
@@ -34,9 +41,13 @@ html, body{
 <table style="width:100%">
    <thead>
       <tr>
-         <th1><strong> Título </strong></th1>
-         <th> Contenido </th>
-         <th> colspan="5" </th>
+         <!-- <th1><strong> Título </strong></th1> -->
+         <th> Nombre </th>
+         <th> Descripción </th>
+         <th> Contacto </th>
+         <th> Foto </th>
+         <th> Precio </th>
+
       </tr>
    </thead>
 
@@ -44,9 +55,10 @@ html, body{
       <%= @houses.each do |house| %>
       <tr>
          <td> <%= house.title %> </td>
-         <td> <%= house.price %> </td>
+         <td> <%= house.description %> </td>
+         <td> <%= house.email %> </td>
          <td> <%= image_tag house.image.url(:medium) %> </td>
-         <td> <%= link_to 'show', house %> </td>
+         <td> <%= house.price %> </td>
       </tr>
       <% end %>
    </tbody>

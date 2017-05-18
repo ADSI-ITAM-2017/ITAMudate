@@ -6,11 +6,11 @@ html{
 }
 html, body{
    background-image: url("../assets/portfolio-1.jpg");
-   background-size:cover; 
+   background-size:cover;
 	background-repeat:no-repeat;
 	background-attachment:fixed;
 	height:100%;
-   
+
 }
 </style>
 </head>
@@ -19,9 +19,12 @@ html, body{
 
 <%= form_for(:session, url: '/ingresa') do |f| %>
    </br>
+   </br>
   <%= f.email_field :email, :placeholder => "email" %>
   </br>
+  </br>
   <%= f.password_field :password, :placeholder => "contraseña" %>
+  </br>
   </br>
   <%= f.submit "Ingresar", class: "btn-submit" %>
   </br>

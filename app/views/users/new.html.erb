@@ -6,7 +6,7 @@ html{
 }
 html, body{
    background-image: url("../assets/bg.jpg");
-   background-size:cover; 
+   background-size:cover;
    background-repeat:no-repeat;
    background-attachment:fixed;
    height:100%;
@@ -18,13 +18,18 @@ html, body{
 
    <%= form_for(@user) do |f| %>
       </br>
+      </br>
       <%= f.text_field :first_name, :placeholder => "Nombre" %>
+      </br>
       </br>
       <%= f.text_field :last_name, :placeholder => "Apellido" %>
       </br>
+      </br>
       <%= f.email_field :email, :placeholder => "email" %>
       </br>
+      </br>
       <%= f.password_field :password, :placeholder => "contraseña" %>
+      </br>
       </br>
       <%= f.submit "Crear una cuenta", class: "btn btn-lg btn-dark" %>
       </br>
