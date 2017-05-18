@@ -1,6 +1,20 @@
 <!DOCTYPE html>
 <head>
 <style>
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
 html{
    height: 10%;
 }
@@ -17,10 +31,10 @@ html, body{
 
 <h1> Casas disponibles </h1>
 
-<table>
+<table style="width:100%">
    <thead>
       <tr>
-         <th> Título </th>
+         <th1><strong> Título </strong></th1>
          <th> Contenido </th>
          <th> colspan="5" </th>
       </tr>
@@ -32,6 +46,7 @@ html, body{
          <td> <%= house.title %> </td>
          <td> <%= house.price %> </td>
          <td> <%= image_tag house.image.url(:medium) %> </td>
+         <td> <%= link_to 'show', house %> </td>
       </tr>
       <% end %>
    </tbody>
